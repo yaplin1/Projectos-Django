@@ -1,0 +1,44 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+   <!-- Heading Titulo-->
+   <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" style="width: 550px;" src="{% static 'ProyectoWebApp/img/principal.jpg' %}" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-upper">Bienevenidos a</span>
+            <span class="section-heading-lower">surtido ya</span>
+          </h2>
+          <p class="mb-3">Encuentra en nuestra tienda los productos para tu hogar, seleccionados por categorías como abarrotes, lácteos, carnes, frutas y verduras, bebidas y limpieza.
+          </p>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+    <!-- Message Mensaje-->
+    <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-upper">Compromiso total</span>
+                <span class="section-heading-lower">Garantizado</span>
+              </h2>
+              <p class="mb-0">Con experiencia a nuestro cliente, desde Gestión de servicio tenemos los conocimientos y herramientas necesarios para llevar acabo con puntualidad y profesionalidad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+{% endblock %}
