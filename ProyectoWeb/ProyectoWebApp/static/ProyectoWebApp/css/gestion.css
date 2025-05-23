@@ -307,3 +307,109 @@ text-decoration: none;
 
 }
 
+
+.col-md-3 {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 15px;
+    display: flex; /* Asegura que la columna sea flex para alinear los cards */
+    align-items: stretch; /* ESTO ES CLAVE: Hace que todas las cards en una fila tengan la misma altura */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* MUY IMPORTANTE: La tarjeta toma la altura completa de su columna flex */
+    width: 100%; /* Asegura que la tarjeta ocupe todo el ancho de la columna */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 300px; /* Un valor mínimo para la altura de la tarjeta. Ajusta según sea necesario. */
+}
+
+.card-img-top {
+    width: 100%;
+    max-height: 180px; /* Ajusta este valor si las imágenes siguen siendo muy pequeñas */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    object-fit: contain;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Esto empuja el footer hacia abajo */
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    padding-bottom: 0; /* Evita doble padding con el footer */
+}
+
+.card-title {
+    min-height: 40px; /* Espacio para el título */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-footer {
+    margin-top: auto; /* Empuja el footer al final de la tarjeta */
+    background-color: #f8f9fa;
+    border-top: 1px solid rgba(0,0,0,.125);
+    padding: 10px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.card-footer .btn {
+    width: 90%;
+    max-width: 200px;
+    min-width: 120px;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Media queries para la responsividad - MUY IMPORTANTE */
+@media (max-width: 767.98px) {
+    .col-md-3 {
+        flex: 0 0 50%; /* Dos columnas en pantallas pequeñas */
+        max-width: 50%;
+    }
+    /* Puedes añadir más ajustes para la altura de las imágenes, etc., aquí */
+}
+
+@media (max-width: 575.98px) {
+    .col-md-3 {
+        flex: 0 0 100%; /* Una columna en pantallas muy pequeñas */
+        max-width: 100%;
+    }
+}
+
+
+.product-container {
+    display: grid;
+    /* Creates responsive columns that are at least 250px wide, and as many as can fit */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Adds space between cards */
+    justify-items: center; /* Centers content within each grid item if needed */
+    align-items: start; /* Aligns items to the start of their grid cell */
+}
+
