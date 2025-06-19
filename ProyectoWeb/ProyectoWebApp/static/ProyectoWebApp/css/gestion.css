@@ -416,3 +416,30 @@ text-decoration: none;
     align-items: start; /* Aligns items to the start of their grid cell */
 }
 
+/* Base style for category links (applies to all screens by default) */
+.linksCategorias {
+    font-size: 1em; /* Start with a base size, adjust if they are already too small */
+    color: white; /* Ensure they remain white as per your HTML inline style */
+    text-decoration: underline; /* Keep the underline as per your image */
+    margin: 0 5px; /* Add some horizontal spacing between links */
+    white-space: nowrap; /* Prevent individual category names from breaking lines */
+
+}
+
+/* For Very Small Screens (Mobile Phones - single column - your @media (max-width: 575.98px) area) */
+/* This rule is crucial for making them larger and easier to tap on phones */
+@media (max-width: 575.98px) {
+    .linksCategorias {
+        font-size: 1.4em; /* Significantly larger for mobile phones */
+        display: block;   /* Make them block elements so they stack vertically */
+        text-align: center; /* Center the text when they stack */
+        padding: 5px 0;   /* Add vertical padding for easier tapping */
+        margin: 0;        /* Remove horizontal margins if they are stacking */
+        white-space: normal; /* Allow text to wrap if the category name is very long */
+    }
+    /* You might also want to adjust the width of the parent div if necessary */
+    .category-container-div { /* If you give your div a class, e.g., <div class="category-container-div" ...> */
+        width: 95% !important; /* Make it take more width on small screens, override inline style */
+        padding: 0 10px; /* Add padding to the container itself */
+    }
+}
