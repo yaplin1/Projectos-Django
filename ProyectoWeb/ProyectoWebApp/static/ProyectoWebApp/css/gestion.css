@@ -403,6 +403,32 @@ text-decoration: none;
     .col-md-3 {
         flex: 0 0 100%; /* Una columna en pantallas muy pequeñas */
         max-width: 100%;
+        padding-left: 15px; /* More padding on sides for full-width cards */
+        padding-right: 15px;
+    }
+      .card {
+        min-height: 350px; /* Optionally increase min-height for a taller overall card on mobile */
+    }
+
+    .card-img-top {
+        max-height: 280px; /* SIGNIFICANTLY taller images on phones */
+        /* Consider changing object-fit for larger images if desired */
+        /* object-fit: cover; */
+    }
+
+    .card-title {
+        font-size: 1.2rem; /* Larger title for better readability on phones */
+    }
+
+    .product-price {
+        font-size: 1.4em; /* Larger price for better readability on phones */
+    }
+
+    .card-footer .btn {
+        width: 80%; /* Button takes up more width */
+        max-width: none; /* No max width on mobile for button */
+        font-size: 1.0rem; /* Larger button text */
+        padding: 12px 20px; /* More padding for easier tapping */
     }
 }
 
