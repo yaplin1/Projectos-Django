@@ -469,3 +469,24 @@ text-decoration: none;
         padding: 0 10px; /* Add padding to the container itself */
     }
 }
+
+    /* In gestion.css */
+
+/* Default styles for the intro-img class */
+.intro-img {
+  max-width: 100%; /* Make it responsive by default */
+  height: auto;    /* Maintain aspect ratio */
+  display: block;  /* Helps with layout, removes extra space below */
+}
+
+@media (min-width: 768px) { /* For tablets and larger */
+  .intro-img {
+    max-width: 65%; /* Adjust as needed */
+  }
+}
+
+@media (min-width: 992px) { /* For laptops and larger */
+  .intro-img {
+    max-width: 50%; /* Adjust as needed */
+  }
+}
