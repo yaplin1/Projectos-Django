@@ -7,6 +7,15 @@
 
     <section>
 
+        <div class="buscador-container">
+          <form action="{% url 'buscar_productos' %}" method="GET" class="buscador-form">
+            <input type="text" name="q" placeholder="Buscar en tu tienda..." />
+            <button type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        
         <div style="width: 75%; margin: auto; text-align: left; color: white;" class="linksCategorias">
         
         Categorias:&nbsp;&nbsp;<a href="{% url 'Tienda' %}" style="color: white;" class="linksCategorias">Inicio</a>&nbsp;
