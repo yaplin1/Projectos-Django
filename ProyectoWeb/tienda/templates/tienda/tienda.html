@@ -21,7 +21,7 @@
 
         {% for cat in categorias %}
 
-              <a href="{% url 'productos_por_categoria' categorias_id=cat.id %}" class="linksCategorias">{{cat.nombre}}</a>&nbsp;
+              <a href="{% url 'productos_por_categoria' categorias_id=cat.id %}" class="linksCategorias">{{cat.nombre}}</a>
 
         {% endfor %}
 
