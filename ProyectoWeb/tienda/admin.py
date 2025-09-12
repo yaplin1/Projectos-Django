@@ -9,6 +9,8 @@ class CategoriaProdAdmin(admin.ModelAdmin):
 
 class ProductoAdmin(admin.ModelAdmin):
 
+    search_fields=('nombre', 'categorias__nombre')
+    list_display=('nombre', 'categorias', 'precio', 'disponibilidad')
     readonly_fields=('created', 'updated')
 
 admin.site.register(CategoriaProd, CategoriaProdAdmin)
