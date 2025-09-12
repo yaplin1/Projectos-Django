@@ -533,3 +533,29 @@ text-decoration: none;
 .buscador-form button:hover {
   background-color: #388E3C;
 }
+.banner-slider {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #4CAF50;
+  height: 35px; /* o el alto real del banner */
+  text-align: center;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.slide {
+  display: inline-block;
+  padding: 0 40px;
+  animation: deslizar 20s linear infinite;
+}
+
+@keyframes deslizar {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
