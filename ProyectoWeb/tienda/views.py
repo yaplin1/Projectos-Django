@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Producto, CategoriaProd
+from django.db.models import Q # Importamos Q
 
 # Create your views here.
 
