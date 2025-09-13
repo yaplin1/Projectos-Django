@@ -57,7 +57,7 @@
                     <p class="card-text product-price">S/. {{ producto.precio }}</p>
                 </div>
                 <div class="card-footer text-center mt-auto"> {# mt-auto pushes footer to bottom of .card #}
-                    <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success">Agregar al carro</a>
+                    <a href="{% url 'carro:agregar' producto.id %}#carrito" class="btn btn-success">Agregar al carro</a>
                 </div>
             </div>
         </div>
