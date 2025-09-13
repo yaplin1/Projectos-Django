@@ -1,6 +1,6 @@
 
 <div class="d-flex justify-content-end">
-<table class="table table-bordered" style="color: white;">
+<table id="carrito" class="table table-bordered" style="color: white;">
 
     <thead>
         <tr>
@@ -31,8 +31,8 @@
                 <td style="text-align: center; ">{{value.cantidad}}</td>
                 <td>
 
-                    <a href="{% url 'carro:agregar' value.producto_id %}" class="btn btn-sm btn-success">+</a>
-                    <a href="{% url 'carro:restar' value.producto_id %}" class="btn btn-sm btn-success">-</a><br/>
+                    <a href="{% url 'carro:agregar' value.producto_id %}#carrito" class="btn btn-sm btn-success">+</a>
+                    <a href="{% url 'carro:restar' value.producto_id %}#carrito" class="btn btn-sm btn-success">-</a><br/>
 
                     S/.{{value.precio}}
                     
@@ -73,11 +73,11 @@
     </tr>
 
     {% if request.session.carro.items %}
-
+   <div id="pedido-seccion" class="some-container-class"></div>
     <tr>
         <td colspan="3" style="text-align: center;">
 
-            <a href="../pedidos" class="btn btn-success">Hacer pedido</a>
+            <a href="../pedidos#pedido-seccion" class="btn btn-success">Hacer pedido</a>
 
             {% if messages %}
                 <div class="messages">
@@ -92,6 +92,7 @@
     </tr>
 
     {% endif %}
+    </div>
 </tfoot>
 
 </table>
